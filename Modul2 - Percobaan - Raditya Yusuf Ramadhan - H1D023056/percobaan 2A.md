@@ -8,6 +8,8 @@
 
 ### 1. Gambarkan rangkaian schematic yang digunakan pada percobaan!
 
+![Skematik Rangkaian Push Button](seven_segment.jpg)
+
 ### 2. Apa yang terjadi jika nilai `num` lebih dari 15?
 
 Apabila nilai variabel `num` melebihi 15, program akan mengalami _out of bounds array access_. Artinya, mikrokontroler dipaksa untuk membaca indeks memori di luar batas _array_ `digitPattern` yang hanya dideklarasikan hingga indeks ke-15. Akibatnya, data yang dikirim ke _Seven Segment_ berisi nilai acak/tidak terdefinisi, yang menyebabkan lampu segmen menyala dengan pola yang tidak beraturan (_glitch_) atau mati sama sekali.

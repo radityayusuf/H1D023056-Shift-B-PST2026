@@ -8,6 +8,8 @@
 
 ### 1. Gambarkan rangkaian schematic yang digunakan pada percobaan!
 
+![Skematik Rangkaian Push Button](push_button.jpg)
+
 ### 2. Mengapa pada push button digunakan mode INPUT_PULLUP pada Arduino Uno? Apa keuntungannya dibandingkan rangkaian biasa?
 
 Mode `INPUT_PULLUP` digunakan untuk memberdayakan/mengaktifkan resistor penarik (_pull-up resistor_) internal sebesar ~20 kΩ yang sudah terintegrasi di dalam _chip_ mikrokontroler Arduino.
