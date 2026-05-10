@@ -2,7 +2,7 @@ Bagian 1.6.4: Perulangan
 
 1. Gambarkan rangkaian schematic 5 LED running yang digunakan pada percobaan!
 
-(Catatan: Masukkan gambar/screenshot skematik 5 LED kamu di sini)
+
 
 2. Jelaskan bagaimana program membuat efek LED berjalan dari kiri ke kanan!
    Efek tersebut dihasilkan dari struktur perulangan increment (penambahan). Menggunakan perintah for (int ledPin = 2; ledPin < 8; ledPin++), program memulai perulangan dari pin terkecil (pin 2). Di dalam blok perulangan tersebut, instruksi untuk menyalakan dan mematikan LED dijalankan. Adanya perintah ledPin++ memaksa sistem beralih mengeksekusi pin sebelahnya (pin 3, lalu pin 4, dst) pada iterasi berikutnya, menghasilkan ilusi cahaya berpindah ke kanan.
