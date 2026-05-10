@@ -3,10 +3,10 @@
 ## Bagian 4.5.4: Analog to Digital Converter (ADC)
 
 **1. Apa fungsi perintah analogRead() pada rangkaian praktikum ini?**
-[cite_start]Fungsi `analogRead()` digunakan untuk membaca besaran tegangan analog murni yang dikirimkan oleh potensiometer ke pin A0, kemudian mengonversinya (kuantisasi) menjadi nilai digital diskret yang dapat dipahami oleh mikrokontroler Arduino [cite: 450-453, 609]. [cite_start]Rentang nilai digital yang dihasilkan adalah dari 0 (mewakili 0 Volt) hingga 1023 (mewakili 5 Volt) karena Arduino Uno menggunakan ADC beresolusi 10-bit[cite: 534, 1075].
+Fungsi `analogRead()` digunakan untuk membaca besaran tegangan analog murni yang dikirimkan oleh potensiometer ke pin A0, kemudian mengonversinya (kuantisasi) menjadi nilai digital diskret yang dapat dipahami oleh mikrokontroler Arduino. Rentang nilai digital yang dihasilkan adalah dari 0 (mewakili 0 Volt) hingga 1023 (mewakili 5 Volt) karena Arduino Uno menggunakan ADC beresolusi 10-bit.
 
 **2. Mengapa diperlukan fungsi map() dalam program tersebut?**
-[cite_start]Fungsi `map()` sangat diperlukan untuk men-skala ulang (konversi proporsional) rentang data input agar sesuai dengan batas rentang aktuator output [cite: 538-542]. [cite_start]Pada kasus ini, pembacaan ADC dari potensiometer memiliki rentang 0-1023, sedangkan motor servo SG90 secara fisik hanya bisa berputar dari sudut 0 hingga 180 derajat [cite: 538-541, 991]. Fungsi `map()` secara otomatis menerjemahkan nilai ADC ke sudut yang proporsional sehingga motor tidak menerima perintah pergerakan yang melampaui batas mekanisnya.
+Fungsi `map()` sangat diperlukan untuk men-skala ulang (konversi proporsional) rentang data input agar sesuai dengan batas rentang aktuator output. Pada kasus ini, pembacaan ADC dari potensiometer memiliki rentang 0-1023, sedangkan motor servo SG90 secara fisik hanya bisa berputar dari sudut 0 hingga 180 derajat. Fungsi `map()` secara otomatis menerjemahkan nilai ADC ke sudut yang proporsional sehingga motor tidak menerima perintah pergerakan yang melampaui batas mekanisnya.
 
 **3. Modifikasi Program Servo (Rentang 30° - 150°)**
 
