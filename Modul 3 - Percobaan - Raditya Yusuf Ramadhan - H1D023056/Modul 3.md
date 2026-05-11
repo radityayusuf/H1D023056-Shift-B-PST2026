@@ -4,13 +4,13 @@
 
 **1. Jelaskan proses dari input keyboard hingga LED menyala/mati!**
 
-- **Input:** Pengguna mengetikkan karakter ('1' atau '0') di _keyboard_ dan menekan _Enter_ pada antarmuka Serial Monitor di komputer[cite: 1357].
+- **Input:** Pengguna mengetikkan karakter ('1' atau '0') di _keyboard_ dan menekan _Enter_ pada antarmuka Serial Monitor di komputer.
 - **Transmisi:** Komputer mengubah karakter tersebut menjadi kode ASCII dan mengirimkannya dalam bentuk sinyal digital melalui kabel USB (protokol UART) ke pin RX (Receive) pada Arduino.
 - **Pemrosesan:** Arduino menerima data tersebut dan menyimpannya di _serial buffer_. Perintah `Serial.read()` mengambil karakter tersebut dari _buffer_.
 - **Eksekusi:** Struktur logika `if-else` mengevaluasi karakter. Jika data adalah '1', Arduino mengirimkan tegangan 5V (HIGH) ke pin 12 sehingga LED menyala. Jika '0', tegangan diturunkan ke 0V (LOW) sehingga LED mati.
 
 **2. Mengapa digunakan Serial.available() sebelum membaca data? Apa yang terjadi jika baris tersebut dihilangkan?**
-Fungsi `Serial.available()` digunakan untuk mengecek apakah ada byte data yang sudah masuk dan siap dibaca di dalam _buffer_ penerima[cite: 1358]. Jika baris ini dihilangkan, Arduino akan terus-menerus mengeksekusi `Serial.read()` pada setiap siklus `loop()` meskipun komputer tidak mengirimkan data apa pun. Hal ini akan mengembalikan nilai `-1` (atau 255/karakter kosong), yang menyebabkan program memproses "sampah" secara terus-menerus dan membuang siklus kerja CPU secara percuma.
+Fungsi `Serial.available()` digunakan untuk mengecek apakah ada byte data yang sudah masuk dan siap dibaca di dalam _buffer_ penerima. Jika baris ini dihilangkan, Arduino akan terus-menerus mengeksekusi `Serial.read()` pada setiap siklus `loop()` meskipun komputer tidak mengirimkan data apa pun. Hal ini akan mengembalikan nilai `-1` (atau 255/karakter kosong), yang menyebabkan program memproses "sampah" secara terus-menerus dan membuang siklus kerja CPU secara percuma.
 
 **3. Modifikasi program agar LED berkedip (blink) ketika menerima input '2'**
 
