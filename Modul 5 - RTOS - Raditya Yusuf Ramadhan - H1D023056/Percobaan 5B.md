@@ -95,16 +95,3 @@ void display(void *pvParameters) {
 3. Hasil Pengamatan Modifikasi Sensor DHT Sesungguhnya
    Integrasi komponen sensor DHT fisik membuktikan bahwa pipa antrean pesan (message queue) mampu mengalirkan data parameter fisik lingkungan (suhu dan kelembapan) secara berkala, kontinu, dan akurat ke Serial Monitor. Struktur arsitektur ini sangat andal untuk memisahkan fungsi akuisisi data yang lambat (sensor DHT memerlukan waktu sampling sekitar 2 detik) dari fungsi visualisasi presentasi data, tanpa membebani performa stabilitas kerja mikrokontroler.
 
-```
-
-
-``
-``
-``
-``
-``
-``
-``
-``
-``
-```
